@@ -260,6 +260,7 @@ img {
 
 .hero-indent { display: block; }
 
+.modal-submit,
 .hero-button {
    border-radius: 4px;
    padding: 10px 32px;
@@ -278,6 +279,8 @@ img {
    transition: color var(--trans-duration) var(--trans-timing), background-color var(--trans-duration) var(--trans-timing);
 }
 
+.modal-submit:hover,
+.modal-submit:focus,
 .hero-button:hover,
 .hero-button:focus {
    color: var(--accent-color);
@@ -349,11 +352,56 @@ img {
    fill: var(--accent-color);
 }
 
+.modal-form-svg,
 .modal-close-svg {
    width: 18px;
    height: 18px;
 
    fill: var(--header-studio-color);
+}
+/*
+.modal-form-svg {
+   padding: 11px 12px;
+   fill: var(--title-color);
+}
+
+
+.form-field {
+   position: absolute;
+   display: inline-block;
+   align-items: center;
+}*/
+
+.checkbox {
+   position: absolute;
+   display: block;
+   margin-top: 20px;
+   margin-bottom: 30px;
+}
+
+.checkbox-icon {
+   position: relative;
+   top: 0;
+   left: 0;
+}
+
+.icon {
+   width: 16px;
+   height: 15px;
+   padding-right: 7px;
+   display: inline-block;
+
+   border: 2px solid var(--title-color);
+   border-radius: 2px;
+}
+
+.checkbox:checked ~ .icon {
+   fill: var(--accent-color);
+}
+
+.modal-submit { 
+   padding-left: 56px; 
+   padding-right: 55px;
 }
 
 /* Преимущества работы со студией */
