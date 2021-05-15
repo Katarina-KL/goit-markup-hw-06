@@ -30,6 +30,11 @@
    --trans-timing: cubic-bezier(0.4, 0, 0.2, 1);
    --overlay-portfolio-bcg: rgba(33, 150, 243, 0.9);
    --overlay-examples-bcg: rgba(47, 48, 58, 0.8);
+   --modal-fields-border: rgba(33, 33, 33, 0.2);
+   --placeholder-modal: rgba(117, 117, 117, 0.5);
+   --placeholder-footer: rgba(255, 255, 255, 0.6);
+   --border-footer-mail: rgba(255, 255, 255, 0.3);
+   --input-footer-mail: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 /* 
@@ -260,7 +265,8 @@ img {
 
 .hero-indent { display: block; }
 
-.modal-submit,
+.mail-submit-btn,
+.modal-submit-btn,
 .hero-button {
    border-radius: 4px;
    padding: 10px 32px;
@@ -279,8 +285,6 @@ img {
    transition: color var(--trans-duration) var(--trans-timing), background-color var(--trans-duration) var(--trans-timing);
 }
 
-.modal-submit:hover,
-.modal-submit:focus,
 .hero-button:hover,
 .hero-button:focus {
    color: var(--accent-color);
@@ -319,6 +323,7 @@ img {
    left: 50%;
    transform: translate(-50%, -50%) scale(1);
    opacity: 1;
+   padding: 40px;
 
    width: 100%;
    max-width: 528px;
@@ -359,28 +364,109 @@ img {
 
    fill: var(--header-studio-color);
 }
-/*
-.modal-form-svg {
-   padding: 11px 12px;
+
+.text-modal {
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 1.15;
+   text-align: center;
+   margin: 0;
+
+   color: var(--title-color);
+}
+
+.form-field {
+   display: inline-block;
+   text-align: left; 
+   margin-top: 10px;
+   width: 100%;
+   
+   font-size: 12px;
+   line-height: 1.16;
+   letter-spacing: .01em;
+}
+
+.form-field input {
+   height: 40px;
+   padding: 11px 12px 11px 39px;
+}
+
+.form-field input,
+.form-field textarea {
+   border: 1px solid var(--modal-fields-border);
+   border-radius: 4px;
+   width: 100%;
+}
+
+.modal-wrapper {
+   position: relative;
+   padding-top: 4px;
+}
+
+.modal-span-svg {
+   position: absolute;
+   display: inline-block;
+   padding: 11px 0 11px 12px;
    fill: var(--title-color);
 }
 
-
-.form-field {
-   position: absolute;
+.comment {
    display: inline-block;
-   align-items: center;
-}*/
+   margin-bottom: 4px;
+}
+
+.form-field textarea {
+   resize: none;
+   height: 120px;
+   padding: 12px 16px;
+}
+
+.form-field textarea::placeholder {
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: .01em;
+
+   color: var(--placeholder-modal);
+}
 
 .checkbox {
-   position: absolute;
-   display: block;
+   display: inline-block;
+   text-align: center;
+   justify-content: center;
    margin-top: 20px;
    margin-bottom: 30px;
+
+   font-size: 14px;
+   line-height: 1.7;
+}
+
+.checkbox .terms {
+   color: var(--accent-color);
+}
+
+/*
+.checkbox {
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+   margin-bottom: 30px;
+
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
 }
 
 .checkbox-icon {
    position: relative;
+   padding-right: 7px;
    top: 0;
    left: 0;
 }
@@ -388,21 +474,24 @@ img {
 .icon {
    width: 16px;
    height: 15px;
-   padding-right: 7px;
    display: inline-block;
 
    border: 2px solid var(--title-color);
    border-radius: 2px;
 }
 
-.checkbox:checked ~ .icon {
-   fill: var(--accent-color);
+.checkbox:checked + .icon {
+   background-color: var(--accent-color);
+   fill: var(--body-hero-color);
+   border-color: var(--accent-color);
+   background-image: url("../images/icons.svg#icon-check");
+   background-size: contain;
+   background-origin: border-box;
 }
 
-.modal-submit { 
-   padding-left: 56px; 
-   padding-right: 55px;
-}
+*/
+
+
 
 /* Преимущества работы со студией */
 .benefits { display: flex; }
@@ -601,7 +690,6 @@ img {
    background-color: var(--bcg-footer-color);
 }
 
-
 .footer-links .container { 
    width: 1200px;
    display: flex;
@@ -687,7 +775,52 @@ img {
 }
 
 /* Подписаться на рассылку в футере */
+.subscription-footer {
+   margin-left: 30px;
+}
 
+.footer-form .form-field { margin-top: 0; }
+
+.footer-form input {
+   background: transparent;
+   width: 358px;
+   height: 50px;
+   border: 1px solid var(--border-footer-mail);
+   filter: var(--input-footer-mail);
+   border-radius: 4px;
+   padding: 15px 16px;
+   position: relative;
+}
+
+.footer-form input::placeholder {
+   font-size: 16px;
+   line-height: 1.25;
+
+   color: var(--placeholder-footer);
+}
+
+.mail-submit-btn {
+   position: absolute;
+   margin-left: 12px;
+   padding-left: 28px;
+   padding-right: 29px;
+   width: 200px;
+   height: 50px;
+   display: inline-block;
+   justify-content: center;
+}
+
+.footer-svg-span {
+   text-align: left;
+}
+
+.footer-form-svg {
+   width: 24px;
+   height: 24px;
+   margin-left: 10px;
+
+   fill: var(--body-hero-color);
+}
 
 /* 
 * Основной контент страницы "Портфолио" (фильтр из кнопок и примеры проектов)
