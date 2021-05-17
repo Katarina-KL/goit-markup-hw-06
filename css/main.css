@@ -8,33 +8,34 @@
    --accent-color: #2196f3;
    --body-hero-color: #fff;
    --title-color: #212121;
-   --footer-contacts-color: rgba(255,255,255,0.6);
+   --footer-contacts-color: rgba(255,255,255,.6);
    --main-text-color: #757575;
    --header-studio-color: #000;
-   --hero-btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-   --team-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-   --project-hover: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+   --hero-btn-shadow: 0px 4px 4px rgba(0,0,0,.15);
+   --team-box-shadow: 0px 1px 3px rgba(0,0,0,0.12), 0px 1px 1px rgba(0,0,0,.14), 0px 2px 1px rgba(0,0,0,.2);
+   --project-hover: 0px 1px 1px rgba(0,0,0,.12), 0px 4px 4px rgba(0,0,0,.06), 1px 4px 6px rgba(0,0,0,.16);
    --header-border: #ececec;
    --project-border: #eee;
    --bcg-team-color: #f5f4fa;
    --bcg-footer-color: #2f303a;
    --bcg-hero-color: #c4c4c4;
-   --hero-overlay: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
-   --portfolio-btn-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+   --hero-overlay: rgba(47,48,58,.4), rgba(47,48,58,.4);
+   --portfolio-btn-shadow: 0px 3px 1px rgba(0,0,0,.1), 0px 1px 2px rgba(0,0,0,.08), 0px 2px 2px rgba(0,0,0,.12);
    --social-icons-team: #afb1b8;
-   --bcg-footer-icons: rgba(255, 255, 255, 0.1);
-   --backdrop-color:  rgba(0, 0, 0, 0.2);
-   --modal-window-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+   --bcg-footer-icons: rgba(255,255,255,.1);
+   --backdrop-color:  rgba(0,0,0,.2);
+   --modal-window-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 1px 1px rgba(0,0,0,.14), 0px 2px 1px rgba(0,0,0,.2);
    --modal-close-btn: #0000001A;
    --trans-duration: 250ms;
-   --trans-timing: cubic-bezier(0.4, 0, 0.2, 1);
-   --overlay-portfolio-bcg: rgba(33, 150, 243, 0.9);
-   --overlay-examples-bcg: rgba(47, 48, 58, 0.8);
-   --modal-fields-border: rgba(33, 33, 33, 0.2);
-   --placeholder-modal: rgba(117, 117, 117, 0.5);
-   --placeholder-footer: rgba(255, 255, 255, 0.6);
-   --border-footer-mail: rgba(255, 255, 255, 0.3);
-   --input-footer-mail: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+   --trans-timing: cubic-bezier(.4,0,.2,1);
+   --overlay-portfolio-bcg: rgba(33,150,243,.9);
+   --overlay-examples-bcg: rgba(47,48,58,.8);
+   --modal-fields-border: rgba(33,33,33,.2);
+   --placeholder-modal: rgba(117,117,117,.5);
+   --placeholder-footer: rgba(255,255,255,.6);
+   --border-footer-mail: rgba(255,255,255,.3);
+   --input-footer-mail: drop-shadow(0px 4px 4px rgba(0,0,0,.15));
+   --btn-bcg-focus: #188CE8;
 }
 
 /* 
@@ -95,12 +96,12 @@ body {
 }
 
 .header-links {
-   border: 1px solid var(--header-border);
-
    font-size: 14px;
    font-weight: 500;
    line-height: 1.14;
    letter-spacing: .02em;
+
+   border: 1px solid var(--header-border);
 }
 
 .full-logo-header { 
@@ -156,14 +157,16 @@ body {
 .site-nav .current { position: relative; }
 
 .site-nav .current::after {
-   content: "";
-   display: block;
    position: absolute;
    bottom: 0;
+
+   display: block;
    width: 100%;
    height: 4px;
+
    background-color: var(--accent-color);
    border-radius: 2px;
+   content: "";
 }
 
 .contacts-header { 
@@ -186,6 +189,7 @@ body {
 
 .contacts-icon { 
    margin-right: 10px;
+
    stroke: currentColor;
 }
 
@@ -205,16 +209,18 @@ body {
 
 .visually-hidden {
    position: absolute;
+
    width: 1px;
    height: 1px;
-   margin: -1px;
-   border: 0;
    padding: 0;
+   margin: -1px;
 
    white-space: nowrap;
    clip-path: inset(100%);
    clip: rect(0 0 0 0);
    overflow: hidden;
+
+   border: 0;
 }
 
 .hero-button,
@@ -225,9 +231,9 @@ body {
 
 img {
    display: block;
-   margin: 0;
-   max-width: 100%;
    height: auto;
+   max-width: 100%;
+   margin: 0;
 }
 
 /* 
@@ -236,10 +242,10 @@ img {
 
 /* Герой - главный баннер (слоган и кнопка "Заказать услугу") */ 
 .hero { 
+   height: 600px;
+   max-width: 1600px;
    padding-top: 200px;
    padding-bottom: 200px;
-   max-width: 1600px;
-   height: 600px;
    margin-left: auto;
    margin-right: auto;
 
@@ -247,8 +253,8 @@ img {
 
    background-color: var(--bcg-hero-color);
    background-image: linear-gradient(to top, var(--hero-overlay)), url(../images/hero.jpg);
-   background-repeat: no-repeat;
    background-position: center;
+   background-repeat: no-repeat;
    background-size: cover;
 }
 
@@ -268,9 +274,8 @@ img {
 .mail-submit-btn,
 .modal-submit-btn,
 .hero-button {
-   border-radius: 4px;
-   padding: 10px 32px;
    min-width: 200px;
+   padding: 10px 32px;
 
    font-size: 16px;
    font-weight: 700;
@@ -281,15 +286,18 @@ img {
 
    background-color: var(--accent-color);
    border: 1px solid transparent;
+   border-radius: 4px;
    box-shadow: var(--hero-btn-shadow);
-   transition: color var(--trans-duration) var(--trans-timing), background-color var(--trans-duration) var(--trans-timing);
+   transition: background-color var(--trans-duration) var(--trans-timing);
 }
 
+.mail-submit-btn:hover,
+.mail-submit-btn:focus,
+.modal-submit-btn:hover,
+.modal-submit-btn:focus,
 .hero-button:hover,
 .hero-button:focus {
-   color: var(--accent-color);
-
-   background-color: var(--body-hero-color);
+   background-color: var(--btn-bcg-focus);
 }
 
 /* Модальное окно */
@@ -301,38 +309,41 @@ img {
    width: 100%;
    height: 100%;
 
+   background-color: var(--backdrop-color);
    opacity: 1;
    transition: opacity var(--trans-duration) var(--trans-timing);
-   background-color: var(--backdrop-color);
 }
 
 .backdrop.is-hidden {
-   opacity: 0;
    pointer-events: none;
+
+   opacity: 0;
    visibility: hidden;
+   transition: opacity var(--trans-duration) var(--trans-timing);
 }
 
 .backdrop.is-hidden .modal {
    opacity: 0;
    transform: translate(-50%, -50%) scale(0.9);
+   transition: opacity var(--trans-duration) var(--trans-timing), transform var(--trans-duration) var(--trans-timing);
 }
 
 .modal {
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%, -50%) scale(1);
-   opacity: 1;
-   padding: 40px;
 
+   padding: 40px;
    width: 100%;
    max-width: 528px;
    min-height: 581px;
 
+   background-color: var(--body-hero-color);
    box-shadow: var(--modal-window-shadow);
    border-radius: 4px;
-   background-color: var(--body-hero-color);
    
+   opacity: 1;
+   transform: translate(-50%, -50%) scale(1);
    transition: transform var(--trans-duration) var(--trans-timing), opacity var(--trans-duration) var(--trans-timing);
 }
 
@@ -340,21 +351,17 @@ img {
    position: absolute;
    top: 8px;
    right: 8px;
+
    display: flex;
    align-items: center;
    width: 30px;
    height: 30px;
    padding: 6px;
 
+   background-color: var(--body-hero-color);
    border: 1px solid var(--modal-close-btn);
    border-radius: 30px;
-   background-color: var(--body-hero-color);
    transition: fill var(--trans-duration) var(--trans-timing);
-}
-
-.modal-close:hover .modal-close-svg,
-.modal-close:focus .modal-close-svg {
-   fill: var(--accent-color);
 }
 
 .modal-form-svg,
@@ -365,25 +372,31 @@ img {
    fill: var(--header-studio-color);
 }
 
+.modal-close:hover .modal-close-svg,
+.modal-close:focus .modal-close-svg {
+   fill: var(--accent-color);
+}
+
 .text-modal {
+   margin: 0;
+
    font-weight: 700;
    font-size: 20px;
    line-height: 1.15;
    text-align: center;
-   margin: 0;
-
    color: var(--title-color);
 }
 
 .form-field {
    display: inline-block;
-   text-align: left; 
-   margin-top: 10px;
+
    width: 100%;
-   
+   margin-top: 10px;
+
    font-size: 12px;
    line-height: 1.16;
    letter-spacing: .01em;
+   text-align: left; 
 }
 
 .form-field input {
@@ -391,60 +404,109 @@ img {
    padding: 11px 12px 11px 39px;
 }
 
+
+.form-field input:focus:invalid + .modal-form-svg,
+.form-field input:focus:invalid {
+   color: red;
+   fill: red;
+
+   border-color: red;
+}
+
 .form-field input,
 .form-field textarea {
+   width: 100%;
+
    border: 1px solid var(--modal-fields-border);
    border-radius: 4px;
-   width: 100%;
+   transition: border var(--trans-duration) var(--trans-timing);
 }
+
+.form-field input:focus,
+.form-field textarea:focus {
+   border: 1px solid var(--accent-color);
+   outline: none;
+}
+
+.form-field input:focus + .modal-form-svg { fill: var(--accent-color); }
 
 .modal-wrapper {
    position: relative;
+
    padding-top: 4px;
 }
 
-.modal-span-svg {
+.modal-form-svg {
    position: absolute;
-   display: inline-block;
-   padding: 11px 0 11px 12px;
+   bottom: 11px;
+   left: 12px;
+
    fill: var(--title-color);
 }
 
 .comment {
    display: inline-block;
+
    margin-bottom: 4px;
 }
 
 .form-field textarea {
-   resize: none;
    height: 120px;
    padding: 12px 16px;
+
+   resize: none;
 }
 
 .form-field textarea::placeholder {
    font-size: 14px;
    line-height: 1.14;
    letter-spacing: .01em;
-
    color: var(--placeholder-modal);
 }
 
-.checkbox {
+.checkbox-label {
    display: inline-block;
-   text-align: center;
    justify-content: center;
+
    margin-top: 20px;
    margin-bottom: 30px;
 
    font-size: 14px;
    line-height: 1.7;
+   text-align: center;
 }
 
-.checkbox .terms {
+.checkbox-label .terms {
    color: var(--accent-color);
 }
 
-/*
+.checkbox-label::before {
+   display: inline-block;
+
+   width: 16px;
+   height: 15px;
+   margin-right: 5px;
+
+   border: 2px solid var(--title-color);
+   border-radius: 2px;
+   content: "";
+   transform: translateY(15%);
+}
+
+/* фокус на чекбокс не работает, пробовала через .checkbox-label::before:focus, */
+
+.checkbox:checked + .checkbox-label::before {
+   background-color: var(--accent-color);
+   background-image: url("../images/check.svg");
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-origin: border-box;
+   border-color: var(--accent-color);
+}
+
+
+/* Другая попытка была через inline svg
 .checkbox {
    display: flex;
    align-items: center;
@@ -464,20 +526,11 @@ img {
    overflow: hidden;
 }
 
-.checkbox-icon {
+.icon {
    position: relative;
    padding-right: 7px;
    top: 0;
    left: 0;
-}
-
-.icon {
-   width: 16px;
-   height: 15px;
-   display: inline-block;
-
-   border: 2px solid var(--title-color);
-   border-radius: 2px;
 }
 
 .checkbox:checked + .icon {
@@ -488,7 +541,6 @@ img {
    background-size: contain;
    background-origin: border-box;
 }
-
 */
 
 
@@ -501,19 +553,18 @@ img {
 .benefits .item:not(:last-child) { margin-right: 30px; }
 
 .thumb-benefits { 
-   height: 120px;
    display: flex;
    align-items: center;
    justify-content: center;
+
+   height: 120px;
    margin-bottom: 30px;
-   border-radius: 4px;
 
    background-color: var(--bcg-team-color); 
+   border-radius: 4px;
 }
 
-.benefits-icons-svg {
-   height: 70px;
-}
+.benefits-icons-svg { height: 70px; }
 
 .overlay-examples-text,
 .section-title-benefits {
@@ -545,18 +596,21 @@ img {
 
 .overlay-examples {
    position: absolute;
-   text-align: center;
    bottom: 0;
    left: 0;
+
    width: 100%;
    padding-top: 27px;
    padding-bottom: 27px;
-   
+
+   text-align: center;
+
    background-color: var(--overlay-examples-bcg);
 }
 
 .overlay-examples-text {
    margin: 0;
+
    color: var(--body-hero-color);
 }
 
@@ -568,16 +622,15 @@ img {
 .team-card { 
    width: 270px;
    margin-right: 0;
-   box-shadow: var(--team-box-shadow);
-   border-radius: 0px 0px 4px 4px;
+
    background: var(--body-hero-color);
+   border-radius: 0px 0px 4px 4px;
+   box-shadow: var(--team-box-shadow);
 }
 
-.team-card:not(:last-child) { margin-right: 30px;}
+.team-card:not(:last-child) { margin-right: 30px; }
 
-.section-team-description {
-   padding: 30px;
-}
+.section-team-description { padding: 30px; }
 
 .section-title-team {
    font-size: 16px;
@@ -612,8 +665,8 @@ img {
    justify-content: center;
    width: 44px;
    height: 44px;
-   border-radius: 50%;
 
+   border-radius: 50%;
    transition: fill var(--trans-duration) var(--trans-timing), background-color var(--trans-duration) var(--trans-timing);
 }
 
@@ -645,10 +698,10 @@ img {
 
 .client-card {
    width: 170px;
-   border: 1px solid var(--main-text-color);
-   box-sizing: border-box;
-   border-radius: 4px;
 
+   border: 1px solid var(--main-text-color);
+   border-radius: 4px;
+   box-sizing: border-box;
    transition: border-color var(--trans-duration) var(--trans-timing);
 }
 
@@ -691,13 +744,15 @@ img {
 }
 
 .footer-links .container { 
-   width: 1200px;
    display: flex;
+   width: 1200px;
    align-items: baseline;
    flex-wrap: nowrap;
 
    font-family: var(--main-font); 
 }
+
+.social-media-footer { margin-right: 30px; }
 
 .address,
 .social-media-footer {
@@ -776,42 +831,56 @@ img {
 
 /* Подписаться на рассылку в футере */
 .subscription-footer {
-   margin-left: 30px;
+   margin-left: auto;
 }
 
 .footer-form .form-field { margin-top: 0; }
 
-.footer-form input {
-   background: transparent;
-   width: 358px;
-   height: 50px;
-   border: 1px solid var(--border-footer-mail);
-   filter: var(--input-footer-mail);
-   border-radius: 4px;
-   padding: 15px 16px;
-   position: relative;
+.footer-form div { 
+   display: flex;
+   align-items: center;
 }
 
+.footer-form input {
+   width: 358px;
+   height: 50px;
+   padding: 15px 16px;
+
+   background: transparent;
+   border: 1px solid var(--border-footer-mail);
+   border-radius: 4px;
+   outline: none;
+   filter: var(--input-footer-mail);
+   transition: border var(--trans-duration) var(--trans-timing);
+}
+
+.footer-form input,
 .footer-form input::placeholder {
    font-size: 16px;
    line-height: 1.25;
-
    color: var(--placeholder-footer);
 }
 
-.mail-submit-btn {
-   position: absolute;
-   margin-left: 12px;
-   padding-left: 28px;
-   padding-right: 29px;
-   width: 200px;
-   height: 50px;
-   display: inline-block;
-   justify-content: center;
+.footer-form input:focus {
+   border: 1px solid var(--accent-color);
 }
 
-.footer-svg-span {
-   text-align: left;
+.mail-submit-btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   height: 50px;
+   padding-left: 28px;
+   padding-right: 29px;
+   margin-left: 12px;
+}
+
+.mail-submit-btn::after .footer-form-svg {
+   width: 24px;
+   height: 24px;
+
+   content: "";
 }
 
 .footer-form-svg {
@@ -829,8 +898,8 @@ img {
 .filter { 
    display: flex;
    justify-content: center;
-
    margin-bottom: 50px;
+
    text-align: center; 
 }
 
@@ -838,9 +907,8 @@ img {
 
 .portfolio-button {
    display: inline-block;
-   border-radius: 4px;
-   padding: 6px 22px;
    min-width: 73px;
+   padding: 6px 22px;
 
    font-size: 16px;
    font-weight: 500;
@@ -850,6 +918,7 @@ img {
 
    background-color: var(--bcg-team-color);
    border: 1px solid transparent;
+   border-radius: 4px;
    transition: color var(--trans-duration) var(--trans-timing), background-color var(--trans-duration) var(--trans-timing), box-shadow var(--trans-duration) var(--trans-timing);
 }
 
@@ -917,20 +986,21 @@ img {
 
 .flex-img { 
    position: relative; 
+
    overflow: hidden;
 }
 
 .overlay-project {
    position: absolute;
-   content: "";
    top: 0;
+
    display: inline-block;
    width: 100%;
    height: 100%;
-   opacity: 0;
    padding: 63px 24px;
 
-
+   opacity: 0;
+   content: "";
    transform: translateY(100%);
    background-color: var(--overlay-portfolio-bcg);
    transition: opacity var(--trans-duration) var(--trans-timing), transform var(--trans-duration) var(--trans-timing);
@@ -938,8 +1008,8 @@ img {
 
 .flex-element-link:hover .overlay-project,
 .flex-element-link:focus .overlay-project {
-   transform: translateY(0);
    opacity: 1;
+   transform: translateY(0);
 }
 
 .overlay-project-text {
