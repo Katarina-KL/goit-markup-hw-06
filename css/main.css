@@ -319,7 +319,7 @@ img {
 
    opacity: 0;
    visibility: hidden;
-   transition: opacity var(--trans-duration) var(--trans-timing);
+   transition: opacity var(--trans-duration) var(--trans-timing), visibility var(--trans-duration) var(--trans-timing);
 }
 
 .backdrop.is-hidden .modal {
@@ -403,7 +403,6 @@ img {
    height: 40px;
    padding: 11px 12px 11px 39px;
 }
-
 
 .form-field input:focus:invalid + .modal-form-svg,
 .form-field input:focus:invalid {
@@ -491,9 +490,13 @@ img {
    border-radius: 2px;
    content: "";
    transform: translateY(15%);
+   transition: border var(--trans-duration) var(--trans-timing);
 }
 
-/* фокус на чекбокс не работает, пробовала через .checkbox-label::before:focus, */
+.checkbox-label::before:focus {
+   border: 1px solid var(--accent-color);
+   outline: none;
+}
 
 .checkbox:checked + .checkbox-label::before {
    background-color: var(--accent-color);
@@ -503,47 +506,8 @@ img {
    background-repeat: no-repeat;
    background-origin: border-box;
    border-color: var(--accent-color);
+   transition: background-color var(--trans-duration) var(--trans-timing), background-image var(--trans-duration) var(--trans-timing);
 }
-
-
-/* Другая попытка была через inline svg
-.checkbox {
-   display: flex;
-   align-items: center;
-   margin-top: 20px;
-   margin-bottom: 30px;
-
-   position: absolute;
-   width: 1px;
-   height: 1px;
-   margin: -1px;
-   border: 0;
-   padding: 0;
-
-   white-space: nowrap;
-   clip-path: inset(100%);
-   clip: rect(0 0 0 0);
-   overflow: hidden;
-}
-
-.icon {
-   position: relative;
-   padding-right: 7px;
-   top: 0;
-   left: 0;
-}
-
-.checkbox:checked + .icon {
-   background-color: var(--accent-color);
-   fill: var(--body-hero-color);
-   border-color: var(--accent-color);
-   background-image: url("../images/icons.svg#icon-check");
-   background-size: contain;
-   background-origin: border-box;
-}
-*/
-
-
 
 /* Преимущества работы со студией */
 .benefits { display: flex; }
@@ -599,11 +563,11 @@ img {
    bottom: 0;
    left: 0;
 
+   display: flex;
+   align-items: center;
+   justify-content: center;
    width: 100%;
-   padding-top: 27px;
-   padding-bottom: 27px;
-
-   text-align: center;
+   height: 70px;
 
    background-color: var(--overlay-examples-bcg);
 }
@@ -696,27 +660,19 @@ img {
    justify-content: center;
 }
 
-.client-card {
-   width: 170px;
-
-   border: 1px solid var(--main-text-color);
-   border-radius: 4px;
-   box-sizing: border-box;
-   transition: border-color var(--trans-duration) var(--trans-timing);
-}
-
 .client-card:not(:last-child) { margin-right: 30px; }
-
-.client-card:hover,
-.client-card:focus { 
-   border-color: var(--accent-color); 
-}
 
 .client-card-link {
    display: flex;
-   padding: 25px 32px;
+   align-items: center;
+   justify-content: center;
+   height: 92px;
+   width: 170px;
 
-   transition: fill var(--trans-duration) var(--trans-timing);
+   border: 1px solid var(--main-text-color);
+   box-sizing: border-box;
+   border-radius: 4px;
+   transition: fill var(--trans-duration) var(--trans-timing), border-color var(--trans-duration) var(--trans-timing);
 }
 
 .client-icons-svg { 
@@ -727,9 +683,12 @@ img {
    transition: fill var(--trans-duration) var(--trans-timing);
 }
 
+.client-card-link:hover,
+.client-card-link:focus,
 .client-card-link:hover .client-icons-svg,
 .client-card-link:focus .client-icons-svg { 
    fill: var(--accent-color); 
+   border-color: var(--accent-color);
 }
 
 /* 
