@@ -105,13 +105,15 @@ body {
 }
 
 .logo-accent {
-   padding-top: 24px;
-   padding-bottom: 25px;
-
    font-family: var(--logo-font);
    font-size: 26px;
    font-weight: 700;
    line-height: 1.2;
+}
+
+.header-links .logo-accent {
+   padding-top: 24px;
+   padding-bottom: 25px;
 }
 
 .logo-header {
@@ -499,6 +501,8 @@ img {
 
 .social-media-footer { margin-right: 30px; }
 
+address { margin-top: 20px; }
+
 .address,
 .social-media-footer {
    width: 270px;
@@ -506,10 +510,6 @@ img {
 
 .footer-links .address { 
    margin-right: 30px; 
-}
-
-.full-logo-footer { 
-   margin-bottom: 20px;
 }
 
 .logo-footer {
